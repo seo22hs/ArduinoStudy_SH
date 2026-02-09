@@ -7,10 +7,12 @@ void setup() {
 
   pinMode(ledPin, OUTPUT);
   pinMode(buttonPin, INPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
   buttonState = digitalRead(buttonPin);
+  Serial.println(buttonState);
 
   if (buttonState == HIGH) {
     digitalWrite(ledPin, HIGH);
